@@ -1,76 +1,44 @@
-class Goose:
+class Animals:
   def __init__(self, name, weight):
     self.name = name
     self.weight = weight
+
+def feed(self, food_weight):
+    return print(f'{self.name} feeded with {food_weight} kilos of food.')
+    self.weight += food_weight
+
+class Birds(Animals):
+  def collect_egg(self):
+    return print('1 egg collected')
+
+class Milk(Animals):
+  def milk(self, milk_volume):
+    self.weight -= milk_volume
+    return print(f'{milk_volume} liters of milk collected')
+
+
+
+class Goose(Birds): 
   sound = 'honk'
 
-  def feed(self, food_weight):
-    self.weight += food_weight
-
-  def collect_egg(self):
-    return 1;
-
-class Chicken:
-  def __init__(self, name, weight):
-    self.name = name
-    self.weight = weight
+class Chicken(Birds):
   sound = 'cluck'
 
-  def feed(self, food_weight):
-    self.weight += food_weight
-  
-  def collect_egg(self):
-    return 1;
-
-class Cow:
-  def __init__(self, name, weight):
-    self.name = name
-    self.weight = weight
+class Cow(Milk):
   sound = 'moo'
 
-  def feed(self, food_weight):
-    self.weight += food_weight
-
-  def milk(self, milk_volume):
-    self.weight -= milk_volume  
-
-class Sheep:
-  def __init__(self, name, weight):
-    self.name = name
-    self.weight = weight
+class Sheep(Animals):
   sound = 'baa'
 
-  def feed(self, food_weight):
-    self.weight += food_weight
-
   def sheare(self, wool_weight):
-    self.weight -= wool_weight
+    self.weight -= wool_weight/1000
+    return print(f'{wool_weight} grams of wool collected.')
   
-class Goat:
-  def __init__(self, name, weight):
-    self.name = name
-    self.weight = weight
+class Goat(Milk):
   sound = 'maa'
 
-  def feed(self, food_weight):
-    self.weight += food_weight
-  
-  def milk(self, milk_volume):
-    self.weight -= milk_volume 
-
-class Duck:
-  def __init__(self, name, weight):
-    self.name = name
-    self.weight = weight
-
+class Duck(Birds):
   sound = 'quack'
-
-  def feed(self, food_weight):
-    self.weight += food_weight
-  
-  def collect_egg(self):
-    return 1;
-
 
 def create_farm():
 
