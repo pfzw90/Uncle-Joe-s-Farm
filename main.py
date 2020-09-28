@@ -3,9 +3,12 @@ class Animals:
     self.name = name
     self.weight = weight
 
-def feed(self, food_weight):
-    return print(f'{self.name} feeded with {food_weight} kilos of food.')
+  def feed(self, food_weight):
+    return print(f'{self.name} is feeded with {food_weight} kilos of food.')
     self.weight += food_weight
+
+  def talk(self):
+    return print(f'{self.name} goes \"{self.sound}!\"')
 
 class Birds(Animals):
   def collect_egg(self):
@@ -70,8 +73,18 @@ def create_farm():
       total_weight += animal.weight
     print(f'Total weight of all the animals in the farm: {total_weight} kgs.')
 
+  def talk_all():
+    for animal in uncle_joe_farm:
+      animal.talk()
+
+  def feed_all(quantity):
+    for animal in uncle_joe_farm:
+      animal.feed(quantity)
+
   find_haviest_animal()
   find_total_weight()
   find_animal_type()
+  talk_all()
+  feed_all(10)
 
 create_farm()
