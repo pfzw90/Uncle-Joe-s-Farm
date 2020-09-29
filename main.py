@@ -1,11 +1,12 @@
 class Animals:
+  sound = ''
   def __init__(self, name, weight):
     self.name = name
     self.weight = weight
 
   def feed(self, food_weight):
-    return print(f'{self.name} is feeded with {food_weight} kilos of food.')
     self.weight += food_weight
+    return print(f'{self.name} was fed with {food_weight} kilos of food.')
 
   def talk(self):
     return print(f'{self.name} goes \"{self.sound}!\"')
@@ -21,7 +22,7 @@ class Milk(Animals):
 
 
 
-class Goose(Birds): 
+class Goose(Birds):
   sound = 'honk'
 
 class Chicken(Birds):
